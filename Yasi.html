@@ -2,44 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Yasaman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday Yasaman 🎉</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       background: linear-gradient(135deg, #ffb6c1, #ff69b4);
       color: white;
-      padding: 50px;
+      padding: 20px; /* smaller padding for mobile */
     }
+
     h1 {
-      font-size: 3em;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
+
     p {
-      font-size: 1.5em;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
+
     video {
       margin-top: 20px;
       border: 5px solid white;
       border-radius: 15px;
-      max-width: 100%;
+      width: 100%;  /* make video scale to screen */
+      max-width: 600px; /* limit on large screens */
+      height: auto;
+    }
+
+    /* Responsive text for small screens */
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
   <h1><strong>🎉 Happy Birthday Yasaman 🎉</strong></h1>
-  <p>💖SIIIISIII, today the world celebrates YOU! 💖</p>
-  <p><i>You have always been my partner in crime, but you are going to have to do this getting older thing, all by yourself</i><p>
-  <p>🎉🎂💖Love and miss youuu so so much🎉🎂💖<p>
-  
+  <p>💖 SIIIISIII, today the world celebrates YOU! 💖</p>
+  <p><i>You have always been my partner in crime, but you are going to have to do this getting older thing, all by yourself</i></p>
+  <p>🎉🎂💖 Love and miss youuu so so much 🎉🎂💖</p>
 
   <!-- Birthday Video -->
-  <video width="300" controls>
+  <video controls>
     <source src="yasi.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
 </body>
 </html>
+
+
 
 
 
