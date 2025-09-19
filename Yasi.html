@@ -5,47 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Happy Birthday Yasaman 🎉</title>
   <style>
+    /* Basic Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Body */
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       background: linear-gradient(135deg, #ffb6c1, #ff69b4);
       color: white;
-      padding: 20px; /* smaller padding for mobile */
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
     }
 
+    /* Header */
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-bottom: 10px;
     }
 
+    /* Italic message */
+    .message {
+      font-style: italic;
+      color: #fff0f5;
+    }
+
+    /* Video */
     video {
       margin-top: 20px;
       border: 5px solid white;
       border-radius: 15px;
-      width: 100%;  /* make video scale to screen */
-      max-width: 600px; /* limit on large screens */
+      width: 100%;
+      max-width: 600px;
       height: auto;
     }
 
-    /* Responsive text for small screens */
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      border-radius: 50% 50% 50% 50%;
+      opacity: 0.9;
+      animation: floatUp 6s ease-in infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0.9; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-800px); opacity: 0; }
+    }
+
+    /* Different delays for balloons */
+    .balloon:nth-child(1) { left: 10%; background: red; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 25%; background: blue; animation-delay: 1s; }
+    .balloon:nth-child(3) { left: 40%; background: yellow; animation-delay: 2s; }
+    .balloon:nth-child(4) { left: 60%; background: green; animation-delay: 3s; }
+    .balloon:nth-child(5) { left: 80%; background: pink; animation-delay: 4s; }
+
+    /* Responsive text for very small screens */
     @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
+      h1 { font-size: 1.7rem; }
       p { font-size: 0.9rem; }
+      .balloon { width: 30px; height: 45px; }
     }
   </style>
 </head>
 <body>
-  <h1><strong> Happy Birthday <i>Yasaman</i> 🎉</strong></h1>
-  <p>💖 SIIIISIII, today the world celebrates YOU! 💖</p>
-  <p><i>For your birthday, I wanted to give you something that was absolutely wonderful, but then I remembered you already have me!!</i></p>
-  <p>🎉🎂 Love and miss youuu so so much 🎉🎂</p>
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
 
-  <!-- Birthday Video -->
+  <!-- Header -->
+  <h1><strong>🎉 Happy Birthday Yasaman 🎉</strong></h1>
+  <p>💖 SIIIISIII, today the world celebrates YOU! 💖</p>
+
+  <!-- Birthday message -->
+  <p class="message">
+    <i>"For your birthday, I wanted to give you something that was absolutely wonderful, but then I remembered you already have me"😜🎈</i>
+  </p>
+  <p class="message">🎉🎂💖 Love and miss you so so much 🎉🎂💖</p>
+
+  <!-- Video section -->
   <video controls>
     <source src="yasi.mp4" type="video/mp4">
     Your browser does not support the video tag.
